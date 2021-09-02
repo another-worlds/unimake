@@ -1,0 +1,15 @@
+all: build
+
+build: create
+	make -C build
+
+create:
+	mkdir build
+	cmake -B build/
+	cd build
+	ls
+
+clean:
+	rm -rf build
+run:
+	cd build && ./window
